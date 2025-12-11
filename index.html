@@ -165,25 +165,51 @@
 
         <nav class="hidden md:block bg-blue-900">
             <div class="container mx-auto">
-                <ul class="flex">
-                    <li><a href="/index.html" class="block bg-red-600 text-white font-semibold px-5 py-3">Inicio</a>
+                <ul class="flex items-center">
+                    <li><a href="/index.html"
+                            class="block bg-red-600 text-white font-semibold px-5 py-3 hover:bg-red-700 transition-colors">Inicio</a>
                     </li>
-                    <li><a href="/sobre_nosotros.html"
-                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800"><span>Sobre
-                                nosotros</span><ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li class="relative group">
+                        <a href="/sobre_nosotros.html"
+                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors cursor-pointer">
+                            <span>Sobre nosotros</span>
+                            <ion-icon name="chevron-down-outline"
+                                class="group-hover:rotate-180 transition-transform duration-300"></ion-icon>
+                        </a>
+                        <div
+                            class="absolute left-0 mt-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block z-50 animate-fade-in-down border-t-4 border-gold-500">
+                            <a href="/sobre_nosotros.html"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Historia
+                                Institucional</a>
+                            <a href="/mision_vision.html"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Misión,
+                                Visión y Valores</a>
+                            <a href="/despacho.html"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Despacho
+                                del Director</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Ex-Directores</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 transition-colors">Organigrama</a>
+                        </div>
+                    </li>
                     <li><a href="#"
-                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800"><span>Servicios</span><ion-icon
-                                name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Transparencia</a>
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Servicios</a>
+                    </li>
+                    <li><a href="#"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Transparencia</a>
                     </li>
                     <li><a href="/articulos.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Noticias</a></li>
-                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Aula Virtual</a>
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Noticias</a>
                     </li>
                     <li><a href="#"
-                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800"><span>Reglamentos</span><ion-icon
-                                name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Contactos</a>
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Aula
+                            Virtual</a></li>
+                    <li><a href="#"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Reglamentos</a>
+                    </li>
+                    <li><a href="#"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Contactos</a>
                     </li>
                 </ul>
             </div>

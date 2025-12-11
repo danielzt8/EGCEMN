@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página | EGCEMN</title>
+    <meta name="description" content="Descripción breve del contenido de esta página.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        gold: {
+                            500: '#d97706',
+                            600: '#b45309',
+                        },
+                        red: {
+                            700: '#b91c1c',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Merriweather"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Estilos básicos para contenido enriquecido */
+        .prose p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+
+        .prose ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .prose li::before {
+            content: "•";
+            color: #d97706;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <div class="bg-blue-900 text-white text-xs border-b border-blue-800">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/1200px-Coat_of_arms_of_the_Dominican_Republic.svg.png"
+                    alt="Escudo RD" class="h-4 w-auto">
+                <span class="font-semibold tracking-wide">Este es una web oficial del Gobierno de la República
+                    Dominicana</span>
+            </div>
+            <div class="flex items-center gap-4 text-blue-200">
+                <span class="flex items-center gap-1"><ion-icon name="lock-closed-outline"></ion-icon> Seguro y
+                    encriptado (HTTPS)</span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-1"><ion-icon name="globe-outline"></ion-icon> .mil.do /
+                    .gob.do</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-center md:hidden mb-4">
+                <div class="flex flex-col items-center space-y-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/1200px-Coat_of_arms_of_the_Dominican_Republic.svg.png"
+                        alt="Escudo República Dominicana" class="h-10 w-auto">
+                    <span class="font-serif italic text-gray-700">República Dominicana</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                <div class="flex flex-col items-center md:flex-row md:items-center md:space-x-4">
+                    <img src="https://unade.edu.do/wp-content/uploads/2023/01/Escuela-de-graduados-de-comando-y-estado-mayor-naval.png"
+                        alt="Logo Academia Naval" class="h-20 w-auto">
+                    <div class="text-center md:text-left mt-2 md:mt-0">
+                        <h1 class="text-2xl font-bold text-blue-900">Escuela de Graduados de Comando y</h1>
+                        <h1 class="text-2xl font-semibold text-blue-900">Estado Mayor Naval (EGCEMN)</h1>
+                        <p class="text-sm text-gray-600">ARMADA DE REPÚBLICA DOMINICANA</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex flex-col items-end space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/1200px-Coat_of_arms_of_the_Dominican_Republic.svg.png"
+                            alt="Escudo República Dominicana" class="h-10 w-auto">
+                        <span class="font-serif italic text-gray-700">República Dominicana</span>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="Búsqueda"
+                            class="border border-r-0 border-gray-300 px-3 py-1 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <button class="bg-blue-800 text-white p-2 hover:bg-blue-900">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+                    </div>
+                    <div class="text-sm text-gray-600 space-x-4">
+                        <a href="index.html" class="hover:underline">Inicio</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Mapa del sitio</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contactos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:hidden mt-6 border border-gray-300 rounded overflow-hidden flex items-stretch shadow-md">
+                <input type="text" placeholder="Búsqueda" class="flex-grow px-3 py-3 text-lg focus:outline-none"
+                    style="border-radius: 0; border: none;">
+                <button id="mobile-menu-btn"
+                    class="bg-blue-900 text-white p-3 hover:bg-blue-800 w-16 flex items-center justify-center">
+                    <ion-icon name="menu-outline" size="large"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-red-600">
+            <ul class="flex flex-col py-2">
+                <li><a href="index.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Inicio</a>
+                </li>
+                <li><a href="sobre_nosotros.html"
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Sobre nosotros</a></li>
+                <li><a href="#" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Servicios</a></li>
+                <li><a href="/articulos.html"
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Noticias</a></li>
+                <li><a href="#" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav class="hidden md:block bg-blue-900">
+            <div class="container mx-auto">
+                <ul class="flex">
+                    <li><a href="index.html"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Inicio</a></li>
+                    <li><a href="sobre_nosotros.html"
+                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800"><span>Sobre
+                                nosotros</span><ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Servicios</a>
+                    </li>
+                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Transparencia</a>
+                    </li>
+                    <li><a href="/articulos.html"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Noticias y Artículos</a>
+                    </li>
+                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Aula Virtual</a>
+                    </li>
+                    <li><a href="#" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
+            <a href="index.html" class="hover:text-navy-900">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="hover:text-navy-900 cursor-default">Sección</span>
+            <span class="mx-2">/</span>
+            <span class="font-semibold text-navy-900">Título de la Página Actual</span>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+
+        <div class="flex flex-col lg:flex-row gap-12">
+
+            <aside class="lg:w-1/4 space-y-6 hidden lg:block">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-navy-900 text-white p-4 font-bold text-center">
+                        Menú de Sección
+                    </div>
+                    <ul class="divide-y divide-gray-100">
+                        <li><a href="#"
+                                class="block px-4 py-3 text-red-700 font-bold border-l-4 border-red-700 bg-gray-50">Página
+                                Actual</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Enlace
+                                Relacionado 1</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Enlace
+                                Relacionado 2</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Enlace
+                                Relacionado 3</a></li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-50 p-6 rounded-lg border border-navy-100">
+                    <h4 class="font-bold text-navy-900 mb-2">¿Necesitas ayuda?</h4>
+                    <p class="text-sm text-gray-600 mb-4">Contáctanos para más información.</p>
+                    <a href="#" class="text-sm font-bold text-red-700 hover:underline">Ir a Contacto →</a>
+                </div>
+            </aside>
+
+            <main class="lg:w-3/4">
+
+                <header class="mb-8 pb-6 border-b border-gray-200">
+                    <h1 class="text-3xl md:text-4xl text-navy-900 font-bold font-serif mb-4">Título Principal de la
+                        Información</h1>
+                    <p class="text-xl text-gray-600 font-light">
+                        Subtítulo o bajada breve que resume de qué trata esta página.
+                    </p>
+                </header>
+
+                <div class="prose max-w-none text-lg text-gray-700">
+
+                    <p>
+                        Este es un párrafo de introducción. Aquí puedes colocar la información general del tema. <strong
+                            class="text-navy-900">Este texto está en negrita</strong> para resaltar conceptos clave. La
+                        estructura está diseñada para ser legible y limpia.
+                    </p>
+
+                    <figure class="my-8">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                            alt="Descripción de la imagen" class="w-full h-auto rounded-lg shadow-md">
+                        <figcaption class="text-sm text-gray-500 mt-2 text-center italic">Pie de foto descriptivo.
+                        </figcaption>
+                    </figure>
+
+                    <h3 class="text-2xl text-navy-900 font-bold mt-8 mb-4">Subtítulo de Sección</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
+                        vestibulum. Cras venenatis euismod malesuada.
+                    </p>
+
+                    <ul class="space-y-2">
+                        <li>Elemento de lista número uno con información relevante.</li>
+                        <li>Elemento de lista número dos.</li>
+                        <li>Elemento de lista número tres.</li>
+                    </ul>
+
+                    <div class="bg-navy-50 border-l-4 border-gold-500 p-6 my-8 rounded-r-lg">
+                        <p class="mb-0 font-medium italic text-navy-900">
+                            "Este es un bloque de texto destacado. Úsalo para citas importantes, notas de advertencia o
+                            información que el usuario no debe perderse."
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2">Columna 1</h4>
+                            <p class="text-sm">Información detallada en formato de columna para comparar datos o separar
+                                temas.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2">Columna 2</h4>
+                            <p class="text-sm">Información detallada en formato de columna para comparar datos o separar
+                                temas.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+
+    <footer class="bg-navy-950 text-gray-300 pt-16 pb-8 border-t-4 border-gold-600 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-4">EGCEMN</h3>
+                    <p class="text-sm leading-relaxed mb-6 text-gray-400">
+                        Formando los estrategas del futuro para la defensa y seguridad de la nación. Una dependencia de
+                        la Universidad Nacional para la Defensa (UNADE).
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors"><ion-icon
+                                name="logo-facebook" size="large"></ion-icon></a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors"><ion-icon
+                                name="logo-twitter" size="large"></ion-icon></a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors"><ion-icon
+                                name="logo-instagram" size="large"></ion-icon></a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors"><ion-icon
+                                name="logo-youtube" size="large"></ion-icon></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-4">Contacto</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <ion-icon name="location-outline" class="text-gold-500 text-xl flex-shrink-0"></ion-icon>
+                            <span>Av. 27 de Febrero, Sede MIDE,<br>Edificio UNADE, Santo Domingo, RD.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <ion-icon name="call-outline" class="text-gold-500 text-xl flex-shrink-0"></ion-icon>
+                            <span>(809) 534-XXXX</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <ion-icon name="mail-outline" class="text-gold-500 text-xl flex-shrink-0"></ion-icon>
+                            <span>info@egcemn.mil.do</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-4">Enlaces de Interés</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#"
+                                class="hover:text-white hover:underline decoration-gold-500 transition-all">Ministerio
+                                de Defensa (MIDE)</a></li>
+                        <li><a href="#"
+                                class="hover:text-white hover:underline decoration-gold-500 transition-all">UNADE</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-white hover:underline decoration-gold-500 transition-all">Armada de
+                                República Dominicana</a></li>
+                        <li><a href="#"
+                                class="hover:text-white hover:underline decoration-gold-500 transition-all">Portal de
+                                Transparencia</a></li>
+                        <li><a href="#" class="hover:text-white hover:underline decoration-gold-500 transition-all">Base
+                                Legal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-4">Ubicación</h3>
+                    <div
+                        class="w-full h-32 bg-gray-800 rounded flex items-center justify-center border border-gray-700">
+                        <span class="text-xs text-gray-500 flex items-center gap-1">
+                            <ion-icon name="map-outline"></ion-icon> Cargar Mapa Interactivo
+                        </span>
+                    </div>
+                    <a href="#" class="inline-block mt-2 text-xs text-gold-500 hover:text-white font-bold uppercase">Ver
+                        en Google Maps</a>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Escuela de Graduados de Comando y Estado Mayor Naval. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Políticas de Privacidad</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>

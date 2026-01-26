@@ -428,6 +428,18 @@
         </div>
     </footer>
 
+    <!-- Notification Toast -->
+    <div id="notification"
+        class="fixed bottom-5 right-5 bg-white border-l-4 border-green-500 shadow-2xl rounded-r p-6 transform translate-y-20 opacity-0 transition-all duration-500 z-50 flex items-center gap-4 pointer-events-none">
+        <div class="text-green-500 text-3xl">
+            <ion-icon name="checkmark-circle"></ion-icon>
+        </div>
+        <div>
+            <h4 class="font-bold text-navy-900">¡Mensaje Enviado!</h4>
+            <p class="text-sm text-gray-600">Hemos recibido tu consulta correctamente.</p>
+        </div>
+    </div>
+
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -435,6 +447,49 @@
         if (btn && menu) {
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
+            });
+        }
+
+        // Form Handling
+        const form = document.querySelector('form');
+        const notification = document.getElementById('notification');
+
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalContent = submitBtn.innerHTML;
+
+                // Loading state
+                submitBtn.innerHTML = '<ion-icon name="refresh-outline" class="animate-spin"></ion-icon> Enviando...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+                // Simulate API call
+                setTimeout(() => {
+                    // Success state button effects
+                    submitBtn.classList.remove('bg-navy-900', 'hover:bg-navy-950');
+                    submitBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                    submitBtn.innerHTML = '<ion-icon name="checkmark-circle-outline"></ion-icon> ¡Enviado!';
+
+                    // Show Toast
+                    notification.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+
+                    // Reset
+                    setTimeout(() => {
+                        this.reset();
+                        submitBtn.innerHTML = originalContent;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-green-600', 'hover:bg-green-700');
+                        submitBtn.classList.add('bg-navy-900', 'hover:bg-navy-950');
+
+                        // Hide Toast
+                        setTimeout(() => {
+                            notification.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                        }, 3000);
+
+                    }, 2000);
+                }, 1500);
             });
         }
     </script>

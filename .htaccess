@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirige cualquier ruta no encontrada a 404.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ 404.html [L]

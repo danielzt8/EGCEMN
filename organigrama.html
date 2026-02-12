@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión, Visión y Valores | EGCEMN</title>
+    <title>Organigrama Institucional | EGCEMN</title>
     <meta name="description"
-        content="Misión, Visión y Valores fundamentales de la Escuela de Graduados de Comando y Estado Mayor Naval.">
+        content="Estructura organizacional y jerárquica de la Escuela de Graduados de Comando y Estado Mayor Naval.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -65,6 +65,27 @@
             line-height: 1.8;
             color: #374151;
         }
+
+        .prose ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .prose li::before {
+            content: "•";
+            color: #d97706;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
     </style>
 </head>
 
@@ -90,7 +111,6 @@
 
     <header class="bg-white shadow-sm">
         <div class="container mx-auto px-4 py-4">
-
             <div class="flex justify-center md:hidden mb-4">
                 <div class="flex flex-col items-center space-y-1">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/1200px-Coat_of_arms_of_the_Dominican_Republic.svg.png"
@@ -148,19 +168,11 @@
                 <li><a href="index.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Inicio</a>
                 </li>
                 <li><a href="sobre_nosotros.html"
-                        class="block bg-red-600 text-white font-semibold px-4 py-2 hover:bg-red-700">Sobre nosotros</a>
-                </li>
-                <li><a href="404.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Servicios</a>
-                </li>
-                <li><a href="404.html"
-                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Transparencia</a>
-                </li>
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Sobre nosotros</a></li>
+                <li><a href="contacto.html"
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Servicios</a></li>
                 <li><a href="articulos.html"
                         class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Noticias</a></li>
-                <li><a href="404.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Aula
-                        Virtual</a></li>
-                <li><a href="404.html"
-                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Reglamentos</a></li>
                 <li><a href="contacto.html"
                         class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Contactos</a></li>
             </ul>
@@ -168,51 +180,26 @@
 
         <nav class="hidden md:block bg-blue-900">
             <div class="container mx-auto">
-                <ul class="flex items-center">
+                <ul class="flex">
                     <li><a href="index.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Inicio</a>
-                    </li>
-                    <li class="relative group">
-                        <a href="sobre_nosotros.html"
-                            class="flex items-center space-x-1 bg-red-600 text-white font-semibold px-5 py-3 hover:bg-red-700 transition-colors cursor-pointer">
-                            <span>Sobre nosotros</span>
-                            <ion-icon name="chevron-down-outline"
-                                class="group-hover:rotate-180 transition-transform duration-300"></ion-icon>
-                        </a>
-                        <div
-                            class="absolute left-0 mt-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block z-50 animate-fade-in-down border-t-4 border-gold-500">
-                            <a href="sobre_nosotros.html"
-                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Historia
-                                Institucional</a>
-                            <a href="mision_vision.html"
-                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Misión,
-                                Visión y Valores</a>
-                            <a href="despacho.html"
-                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Despacho
-                                del Director</a>
-                            <a href="contacto.html"
-                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Ex-Directores</a>
-                            <a href="organigrama.html"
-                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 transition-colors">Organigrama</a>
-                        </div>
-                    </li>
-                    <li><a href="404.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Servicios</a>
-                    </li>
-                    <li><a href="404.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Transparencia</a>
-                    </li>
-                    <li><a href="articulos.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Noticias</a>
-                    </li>
-                    <li><a href="404.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Aula
-                            Virtual</a></li>
-                    <li><a href="404.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Reglamentos</a>
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Inicio</a></li>
+                    <li><a href="sobre_nosotros.html"
+                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800"><span>Sobre
+                                nosotros</span><ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href="contacto.html"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Servicios</a>
                     </li>
                     <li><a href="contacto.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Contactos</a>
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Transparencia</a>
+                    </li>
+                    <li><a href="articulos.html"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Noticias y Artículos</a>
+                    </li>
+                    <li><a href="contacto.html" class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Aula
+                            Virtual</a>
+                    </li>
+                    <li><a href="contacto.html"
+                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800">Contactos</a>
                     </li>
                 </ul>
             </div>
@@ -223,9 +210,9 @@
         <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
             <a href="index.html" class="hover:text-navy-900">Inicio</a>
             <span class="mx-2">/</span>
-            <span class="hover:text-navy-900 cursor-default">Sobre Nosotros</span>
+            <span class="hover:text-navy-900 cursor-default">Sobre nosotros</span>
             <span class="mx-2">/</span>
-            <span class="font-semibold text-navy-900">Misión, Visión y Valores</span>
+            <span class="font-semibold text-navy-900">Organigrama Institucional</span>
         </div>
     </div>
 
@@ -233,128 +220,120 @@
 
         <div class="flex flex-col lg:flex-row gap-12">
 
-            <aside class="lg:w-1/4 space-y-6">
+            <aside class="lg:w-1/4 space-y-6 hidden lg:block">
                 <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                     <div class="bg-navy-900 text-white p-4 font-bold text-center">
                         Sobre Nosotros
                     </div>
                     <ul class="divide-y divide-gray-100">
-                        <li><a href="sobre_nosotros.html"
-                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Historia
-                                Institucional</a></li>
-                        <li><a href="despacho.html"
-                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Despacho
-                                del Director</a></li>
-                        <li><a href="mision_vision.html"
-                                class="block px-4 py-3 text-red-700 font-bold border-l-4 border-red-700 bg-gray-50">Misión
-                                y Visión</a></li>
                         <li><a href="organigrama.html"
-                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Organigrama</a>
+                                class="block px-4 py-3 text-red-700 font-bold border-l-4 border-red-700 bg-gray-50">Organigrama</a>
                         </li>
-                        <li><a href="contacto.html"
-                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Ex-Directores</a>
+                        <li><a href="mision_vision.html"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Misión
+                                y Visión</a></li>
+                        <li><a href="despacho.html"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Mensaje
+                                del Director</a></li>
+                        <li><a href="sobre_nosotros.html"
+                                class="block px-4 py-3 text-gray-600 hover:text-navy-900 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-navy-200">Historia</a>
                         </li>
                     </ul>
+                </div>
+
+                <div class="bg-navy-50 p-6 rounded-lg border border-navy-100">
+                    <h4 class="font-bold text-navy-900 mb-2">Transparencia</h4>
+                    <p class="text-sm text-gray-600 mb-4">Conoce nuestra base legal y manual de funciones.</p>
+                    <a href="contacto.html" class="text-sm font-bold text-red-700 hover:underline">Ver Base Legal →</a>
                 </div>
             </aside>
 
             <main class="lg:w-3/4">
 
-                <header class="mb-10 text-center">
-                    <h1 class="text-3xl md:text-4xl text-navy-900 font-bold font-serif mb-4">Filosofía Institucional
+                <header class="mb-8 pb-6 border-b border-gray-200">
+                    <h1 class="text-3xl md:text-4xl text-navy-900 font-bold font-serif mb-4">Estructura Organizacional
                     </h1>
-                    <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
+                    <p class="text-xl text-gray-600 font-light">
+                        Conoce la jerarquía y las dependencias funcionales que conforman la Escuela de Graduados de
+                        Comando y Estado Mayor Naval.
+                    </p>
                 </header>
 
-                <div class="grid md:grid-cols-2 gap-8 mb-16">
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy-900 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div
-                                class="w-12 h-12 bg-navy-100 rounded-full flex items-center justify-center text-navy-900 text-2xl">
-                                <ion-icon name="compass-outline"></ion-icon>
-                            </div>
-                            <h2 class="text-2xl font-bold text-navy-900 font-serif">Misión</h2>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            Realizar actividades académicas, labores de investigación y extensión, con el propósito de
-                            que los oficiales cursantes amplíen sus conocimientos, principios y doctrinas, que le
-                            permitan perfeccionar y desarrollar de forma eficiente las funciones del mando,
-                            administración y conducción de las operaciones navales, conjuntas y combinadas, maximizando
-                            el empleo de las nuevas tecnologías de la información y la comunicación.
-                        </p>
-                    </div>
+                <div class="prose max-w-none text-lg text-gray-700">
 
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border-t-4 border-gold-500 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div
-                                class="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 text-2xl">
-                                <ion-icon name="telescope-outline"></ion-icon>
-                            </div>
-                            <h2 class="text-2xl font-bold text-navy-900 font-serif">Visión</h2>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            Ser una escuela de educación superior, tomada como marco de referencia por los estudiosos e
-                            investigadores del poder marítimo, estrategia naval, arte de las operaciones navales, la
-                            seguridad y defensa nacional.
-                        </p>
-                    </div>
-                </div>
-
-                <section>
-                    <h3 class="text-2xl font-bold text-navy-900 font-serif mb-6 flex items-center gap-2">
-                        <ion-icon name="diamond-outline" class="text-gold-500"></ion-icon> Valores Institucionales
-                    </h3>
-                    <p class="text-gray-600 mb-8 max-w-2xl">
-                        Los valores éticos y morales que fundamentan el quehacer institucional de la Escuela de
-                        Graduados en Comando y Estado Mayor Naval (EGCEMN) se rigen dentro de un ambiente de:
+                    <p>
+                        La <strong>EGCEMN</strong> opera bajo una estructura jerárquica diseñada para garantizar la
+                        excelencia en la formación de los altos mandos navales. Como dependencia directa del Comando
+                        Conjunto de las Fuerzas Armadas y la Armada de República Dominicana, nuestra organización se
+                        divide en cinco áreas estratégicas de gestión.
                     </p>
 
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <figure class="my-8">
+                        <img src="/images/ORGANIGRAMA DE LA ESCUELA DE GRADUADOS DE  COMANDO Y ESTADO MAYOR NAVAL Corregido (1)_page-0001.jpg"
+                            alt="Organigrama Institucional EGCEMN" class="w-full h-auto rounded-lg shadow-md">
+                        <figcaption class="text-sm text-gray-500 mt-2 text-center italic">Gráfico oficial de la
+                            estructura organizacional aprobada por el MIDE.
+                        </figcaption>
+                    </figure>
 
-                        <div
-                            class="bg-gray-50 p-6 rounded border border-gray-200 hover:bg-white hover:border-navy-200 hover:shadow transition-all group">
-                            <h4 class="font-bold text-navy-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
-                                Honor</h4>
-                            <p class="text-sm text-gray-600">Virtud que caracteriza una persona y que la hace
-                                consistente con la esencia de su ser y con los principios que ha prometido defender.</p>
-                        </div>
+                    <h3 class="text-2xl text-navy-900 font-bold mt-8 mb-4">Cuerpo de Dirección y Staff</h3>
+                    <p>
+                        La Dirección lidera la estrategia institucional, apoyada por órganos consultivos y de soporte
+                        técnico que aseguran el cumplimiento de la normativa legal y académica.
+                    </p>
 
-                        <div
-                            class="bg-gray-50 p-6 rounded border border-gray-200 hover:bg-white hover:border-navy-200 hover:shadow transition-all group">
-                            <h4 class="font-bold text-navy-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
-                                Lealtad</h4>
-                            <p class="text-sm text-gray-600">Es la plena manifestación de fidelidad hacia la verdad
-                                proyectada a la patria, la institución y la familia.</p>
-                        </div>
+                    <ul class="space-y-2">
+                        <li><strong>Dirección EGCEMN:</strong> Máxima autoridad administrativa y académica.</li>
+                        <li><strong>Consejo Académico:</strong> Órgano colegiado de decisión académica.</li>
+                        <li><strong>Asesoría Jurídica y Financiera:</strong> Soporte legal y gestión de recursos.</li>
+                    </ul>
 
-                        <div
-                            class="bg-gray-50 p-6 rounded border border-gray-200 hover:bg-white hover:border-navy-200 hover:shadow transition-all group">
-                            <h4 class="font-bold text-navy-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
-                                Disciplina</h4>
-                            <p class="text-sm text-gray-600">Cumplir las normas establecidas y reconocer la autoridad.
+                    <div class="bg-navy-50 border-l-4 border-gold-500 p-6 my-8 rounded-r-lg">
+                        <p class="mb-0 font-medium italic text-navy-900">
+                            "Nuestra estructura está alineada con los estándares de la UNADE, garantizando que cada
+                            proceso administrativo respalde directamente la calidad educativa del oficial cursante."
+                        </p>
+                    </div>
+
+                    <h3 class="text-2xl text-navy-900 font-bold mt-8 mb-4">Subdirecciones Estratégicas</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2 underline decoration-gold-500">Gestión Académica
+                            </h4>
+                            <p class="text-sm">
+                                Incluye la <strong>Subdirección Académica</strong> y la <strong>Coordinación
+                                    Académica</strong>, responsables de la planificación docente, bibliotecas y los
+                                ejercicios de Juego de Guerra.
                             </p>
                         </div>
-
-                        <div
-                            class="bg-gray-50 p-6 rounded border border-gray-200 hover:bg-white hover:border-navy-200 hover:shadow transition-all group">
-                            <h4 class="font-bold text-navy-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
-                                Excelencia</h4>
-                            <p class="text-sm text-gray-600">Talento o cualidad, que manifiesta lo extraordinariamente
-                                bueno y también que exalta las normas ordinarias.</p>
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2 underline decoration-gold-500">Apoyo Administrativo
+                            </h4>
+                            <p class="text-sm">
+                                Bajo la <strong>Subdirección Administrativa</strong>, se gestionan los Recursos Humanos,
+                                sistemas de cómputos, suministros y servicios de apoyo estudiantil.
+                            </p>
                         </div>
-
-                        <div
-                            class="bg-gray-50 p-6 rounded border border-gray-200 hover:bg-white hover:border-navy-200 hover:shadow transition-all group">
-                            <h4 class="font-bold text-navy-900 text-lg mb-2 group-hover:text-red-700 transition-colors">
-                                Integridad</h4>
-                            <p class="text-sm text-gray-600">Honestidad, transparencia, compostura y decencia en el
-                                trabajo.</p>
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2 underline decoration-gold-500">Admisión y Registro
+                            </h4>
+                            <p class="text-sm">
+                                Responsable de los procesos de ingreso, control de calificaciones, estadísticas
+                                académicas y el registro histórico de egresados.
+                            </p>
                         </div>
-
+                        <div>
+                            <h4 class="font-bold text-navy-900 mb-2 underline decoration-gold-500">Investigación y
+                                Extensión</h4>
+                            <p class="text-sm">
+                                Fomenta la producción intelectual, la educación continua y el vínculo de la Escuela con
+                                la sociedad y otras instituciones militares.
+                            </p>
+                        </div>
                     </div>
-                </section>
+
+                </div>
 
             </main>
         </div>
@@ -391,7 +370,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <ion-icon name="call-outline" class="text-gold-500 text-xl flex-shrink-0"></ion-icon>
-                            <span>(809) 534-XXXX</span>
+                            <span>(809) 530-5149 Ext. 2383</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <ion-icon name="mail-outline" class="text-gold-500 text-xl flex-shrink-0"></ion-icon>
@@ -403,21 +382,18 @@
                 <div>
                     <h3 class="text-white font-serif font-bold text-lg mb-4">Enlaces de Interés</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="contacto.html"
+                        <li><a href="https://mide.gob.do"
                                 class="hover:text-white hover:underline decoration-gold-500 transition-all">Ministerio
                                 de Defensa (MIDE)</a></li>
-                        <li><a href="contacto.html"
+                        <li><a href="https://unade.edu.do"
                                 class="hover:text-white hover:underline decoration-gold-500 transition-all">UNADE</a>
                         </li>
-                        <li><a href="contacto.html"
+                        <li><a href="https://armada.mil.do"
                                 class="hover:text-white hover:underline decoration-gold-500 transition-all">Armada de
                                 República Dominicana</a></li>
                         <li><a href="contacto.html"
                                 class="hover:text-white hover:underline decoration-gold-500 transition-all">Portal de
                                 Transparencia</a></li>
-                        <li><a href="contacto.html"
-                                class="hover:text-white hover:underline decoration-gold-500 transition-all">Base
-                                Legal</a></li>
                     </ul>
                 </div>
 
@@ -437,7 +413,7 @@
 
             <div
                 class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2025 Escuela de Graduados de Comando y Estado Mayor Naval. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Escuela de Graduados de Comando y Estado Mayor Naval. Todos los derechos reservados.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
                     <a href="contacto.html" class="hover:text-white">Políticas de Privacidad</a>
                     <span>|</span>

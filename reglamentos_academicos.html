@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despacho del Director | EGCEMN</title>
-    <meta name="description" content="Mensaje del Director de la Escuela de Graduados de Comando y Estado Mayor Naval.">
+    <title>Reglamentos Académicos | EGCEMN</title>
+    <meta name="description"
+        content="Documentos institucionales y reglamentos académicos de la Escuela de Graduados de Comando y Estado Mayor Naval (EGCEMN).">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -54,21 +55,27 @@
         h1,
         h2,
         h3,
-        h4,
-        h5 {
+        h4 {
             font-family: 'Merriweather', serif;
         }
 
-        /* Estilos para el texto del despacho */
-        .prose p {
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
-            color: #374151;
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800">
 
     <div class="bg-blue-900 text-white text-xs border-b border-blue-800">
         <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
@@ -116,6 +123,7 @@
                             alt="Escudo República Dominicana" class="h-10 w-auto">
                         <span class="font-serif italic text-gray-700">República Dominicana</span>
                     </div>
+
                     <div class="flex items-center">
                         <input type="text" placeholder="Búsqueda"
                             class="border border-r-0 border-gray-300 px-3 py-1 focus:outline-none focus:ring-1 focus:ring-blue-500">
@@ -123,6 +131,7 @@
                             <ion-icon name="search"></ion-icon>
                         </button>
                     </div>
+
                     <div class="text-sm text-gray-600 space-x-4">
                         <a href="https://unade.edu.do" target="_blank"
                             class="hover:underline font-bold text-blue-900">UNADE</a>
@@ -139,6 +148,7 @@
             <div class="md:hidden mt-6 border border-gray-300 rounded overflow-hidden flex items-stretch shadow-md">
                 <input type="text" placeholder="Búsqueda" class="flex-grow px-3 py-3 text-lg focus:outline-none"
                     style="border-radius: 0; border: none;">
+
                 <button id="mobile-menu-btn"
                     class="bg-blue-900 text-white p-3 hover:bg-blue-800 w-16 flex items-center justify-center">
                     <ion-icon name="menu-outline" size="large"></ion-icon>
@@ -154,8 +164,7 @@
                 <li><a href="index.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Inicio</a>
                 </li>
                 <li><a href="sobre_nosotros.html"
-                        class="block bg-red-600 text-white font-semibold px-4 py-2 hover:bg-red-700">Sobre nosotros</a>
-                </li>
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Sobre nosotros</a></li>
                 <li><a href="404.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Servicios</a>
                 </li>
                 <li><a href="https://armada.mil.do/transparencia/"
@@ -165,8 +174,20 @@
                         class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Noticias</a></li>
                 <li><a href="404.html" class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Aula
                         Virtual</a></li>
-                <li><a href="404.html"
-                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Reglamentos</a></li>
+                <li>
+                    <a href="#"
+                        class="block text-white font-semibold px-4 py-2 hover:bg-blue-700 flex justify-between items-center group">
+                        Reglamentos <ion-icon name="chevron-down-outline" class="transition-transform"></ion-icon>
+                    </a>
+                    <ul class="bg-blue-900">
+                        <li><a href="reglamentos_academicos.html"
+                                class="block bg-red-600 text-white font-semibold px-8 py-2 hover:bg-red-700 text-sm border-b border-blue-800">Reglamentos
+                                Académicos</a></li>
+                        <li><a href="https://transparencia.unade.edu.do/wpfd_file/reglamento-academico-no-2-4ta-version-aprobado-el-07-03-2025/"
+                                class="block text-white font-semibold px-8 py-2 hover:bg-blue-700 text-sm">Reglamento
+                                Académico No. 2</a></li>
+                    </ul>
+                </li>
                 <li><a href="contacto.html"
                         class="block text-white font-semibold px-4 py-2 hover:bg-blue-700">Contactos</a></li>
             </ul>
@@ -178,15 +199,15 @@
                     <li><a href="index.html"
                             class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Inicio</a>
                     </li>
-                    <li class="relative group">
+                    <li class="relative group z-[60]">
                         <a href="sobre_nosotros.html"
-                            class="flex items-center space-x-1 bg-red-600 text-white font-semibold px-5 py-3 hover:bg-red-700 transition-colors cursor-pointer">
+                            class="flex items-center space-x-1 text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors cursor-pointer">
                             <span>Sobre nosotros</span>
                             <ion-icon name="chevron-down-outline"
                                 class="group-hover:rotate-180 transition-transform duration-300"></ion-icon>
                         </a>
                         <div
-                            class="absolute left-0 mt-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block z-50 animate-fade-in-down border-t-4 border-gold-500">
+                            class="absolute left-0 mt-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block animate-fade-in-down border-t-4 border-gold-500">
                             <a href="sobre_nosotros.html"
                                 class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Historia
                                 Institucional</a>
@@ -196,7 +217,7 @@
                             <a href="despacho.html"
                                 class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Despacho
                                 del Director</a>
-                            <a href="contacto.html"
+                            <a href="404.html"
                                 class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors">Ex-Directores</a>
                             <a href="organigrama.html"
                                 class="block px-4 py-3 text-navy-900 hover:bg-gray-50 transition-colors">Organigrama</a>
@@ -214,9 +235,25 @@
                     <li><a href="404.html"
                             class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Aula
                             Virtual</a></li>
-                    <li><a href="404.html"
-                            class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Reglamentos</a>
+
+                    <li class="relative group z-[60]">
+                        <a href="#"
+                            class="flex items-center space-x-1 text-white bg-red-600 font-semibold px-5 py-3 hover:bg-red-700 transition-colors cursor-pointer">
+                            <span>Reglamentos</span>
+                            <ion-icon name="chevron-down-outline"
+                                class="group-hover:rotate-180 transition-transform duration-300"></ion-icon>
+                        </a>
+                        <div
+                            class="absolute left-0 mt-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block animate-fade-in-down border-t-4 border-gold-500">
+                            <a href="reglamentos_academicos.html"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 border-b border-gray-100 transition-colors font-semibold">Reglamentos
+                                Académicos</a>
+                            <a href="https://transparencia.unade.edu.do/wpfd_file/reglamento-academico-no-2-4ta-version-aprobado-el-07-03-2025/"
+                                class="block px-4 py-3 text-navy-900 hover:bg-gray-50 transition-colors">Reglamento
+                                Acad. No. 2</a>
+                        </div>
                     </li>
+
                     <li><a href="contacto.html"
                             class="block text-white font-semibold px-5 py-3 hover:bg-blue-800 transition-colors">Contactos</a>
                     </li>
@@ -225,129 +262,84 @@
         </nav>
     </header>
 
-    <div class="bg-gray-100 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-600">
-            <a href="index.html" class="hover:text-navy-900">Inicio</a>
-            <span class="mx-2">/</span>
-            <span class="hover:text-navy-900 cursor-default">Sobre Nosotros</span>
-            <span class="mx-2">/</span>
-            <span class="font-semibold text-navy-900">Despacho del Director</span>
-        </div>
-    </div>
+    <main class="flex-grow bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-bold tracking-widest uppercase text-xs mb-2 block">Documentos
+                    Normativos</span>
+                <h1 class="text-3xl md:text-5xl font-serif font-bold text-navy-900 mb-6">Reglamentos Académicos</h1>
+                <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Acceda a los reglamentos y normativas oficiales que rigen la convivencia, las operaciones y los
+                    estándares académicos de la Escuela de Graduados de Comando y Estado Mayor Naval (EGCEMN).
+                </p>
+            </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-12">
-
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div
-                    class="bg-navy-50 p-8 lg:p-12 flex flex-col items-center border-b lg:border-b-0 lg:border-r border-gray-200">
-                    <div class="w-full max-w-sm mx-auto relative group">
-                        <div
-                            class="aspect-[3/4] w-full bg-gray-300 rounded-lg overflow-hidden shadow-lg border-4 border-white relative flex items-center justify-center">
-                            <img src="images/WhatsApp Image 2025-12-08 at 09.17.02.jpeg" alt="Foto del Director"
-                                class="absolute inset-0 w-full h-full object-cover">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-600">Espacio para
-                                    Foto</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 text-center">
-                            <h3 class="text-xl font-bold text-navy-900 font-serif">CN Mayobanex Montero Tapia ARD</h3>
-                            <div class="w-12 h-1 bg-gold-500 mx-auto my-3 rounded-full"></div>
-                            <p class="text-sm text-gray-600 italic">"Liderazgo, Integridad y Excelencia Académica"</p>
-                        </div>
+                    class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all border-t-4 border-t-blue-800 flex flex-col h-full">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-800 mb-4">
+                        <ion-icon name="document-text" class="text-2xl"></ion-icon>
                     </div>
-
-                    <div class="mt-8 w-full border-t border-gray-200 pt-6">
-                        <ul class="text-sm text-gray-600 space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-navy-100 flex items-center justify-center text-navy-800">
-                                    <ion-icon name="mail"></ion-icon>
-                                </div>
-                                <span>direccion@egcemn.mil.do</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-navy-100 flex items-center justify-center text-navy-800">
-                                    <ion-icon name="call"></ion-icon>
-                                </div>
-                                <span>(809) 534-XXXX Ext. 101</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Reglamento Interno</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Normas de convivencia, deberes, derechos y régimen
+                        disciplinario que aplican a todos los miembros de la comunidad académica y militar de la EGCEMN.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 transition-colors group">
+                        <ion-icon name="download-outline"
+                            class="group-hover:-translate-y-1 transition-transform"></ion-icon> Descargar PDF
+                    </a>
                 </div>
 
-                <div class="lg:col-span-2 p-8 lg:p-16">
-                    <header class="mb-8">
-                        <h4 class="text-gold-600 font-bold text-sm uppercase tracking-widest mb-2">Mensaje Institucional
-                        </h4>
-                        <h1 class="text-3xl md:text-4xl text-navy-900 font-bold font-serif mb-6">Despacho del Director
-                        </h1>
-                        <div class="h-1 w-20 bg-navy-900 rounded"></div>
-                    </header>
-
-                    <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
-                        <p class="font-semibold text-navy-900">
-                            Bienvenidos al portal de la Escuela de Graduados de Comando y Estado Mayor Naval (EGCEMN).
-                        </p>
-
-                        <p>
-                            Para la EGCEMN es un placer compartir con ustedes la misión y el espíritu que guían nuestro
-                            trabajo diario. En la EGCEMN nos enfocamos en formar y perfeccionar a los oficiales
-                            superiores navales que liderarán los procesos estratégicos de nuestra Armada.
-                        </p>
-
-                        <p>
-                            Nuestro compromiso es ofrecer una educación moderna, rigurosa y alineada con los desafíos
-                            actuales de la seguridad y defensa, tanto a nivel nacional como internacional. Hoy más que
-                            nunca, las responsabilidades de la institución militar requieren preparación continua,
-                            pensamiento crítico, ética profesional y capacidad para trabajar en escenarios que van más
-                            allá del mar: desde la protección de infraestructuras y puertos, hasta la seguridad digital,
-                            la inteligencia estratégica y la cooperación con fuerzas aliadas.
-                        </p>
-
-                        <p>
-                            Con más de tres décadas de servicio, he tenido la oportunidad de conocer de cerca la
-                            importancia de la formación especializada y del liderazgo con propósito. Por eso, en esta
-                            Escuela promovemos un ambiente donde la disciplina, la innovación y el trabajo en equipo se
-                            combinan para fortalecer las competencias de nuestros oficiales.
-                        </p>
-
-                        <p>
-                            Agradezco profundamente a todo el personal docente, administrativo y estudiantil por su
-                            entrega y profesionalismo. Cada uno contribuye a que esta institución siga avanzando y
-                            cumpliendo su compromiso institucional.
-                        </p>
-
-                        <p class="mb-12">
-                            Les invito a explorar nuestro portal y a conocer más sobre nuestros programas académicos y
-                            las oportunidades que ofrecemos para impulsar el desarrollo profesional de nuestros
-                            oficiales.
-                        </p>
+                <div
+                    class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all border-t-4 border-t-blue-800 flex flex-col h-full">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-800 mb-4">
+                        <ion-icon name="school" class="text-2xl"></ion-icon>
                     </div>
-
-                    <div
-                        class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center md:items-start gap-4">
-                        <div class="flex-grow text-center md:text-left">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Coat_of_arms_of_the_Dominican_Republic.svg/1200px-Coat_of_arms_of_the_Dominican_Republic.svg.png"
-                                alt="Escudo Pequeño" class="h-12 w-auto mx-auto md:mx-0 mb-3 opacity-50 grayscale">
-                            <h3 class="font-serif font-bold text-navy-900 text-lg">El Director</h3>
-                            <p class="text-sm text-gray-500 uppercase tracking-wide">Escuela de Graduados de Comando y
-                                Estado Mayor Naval</p>
-                        </div>
-                        <div class="md:ml-auto">
-                        </div>
-                    </div>
-
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Reglamento de Evaluación</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Políticas de calificación, promoción, asistencia, y
+                        criterios de evaluación para los programas de Especialidad y Cursos de Estado Mayor.</p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 transition-colors group">
+                        <ion-icon name="download-outline"
+                            class="group-hover:-translate-y-1 transition-transform"></ion-icon> Descargar PDF
+                    </a>
                 </div>
+
+                <div
+                    class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all border-t-4 border-t-blue-800 flex flex-col h-full">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-800 mb-4">
+                        <ion-icon name="medal" class="text-2xl"></ion-icon>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Reglamento de Graduación</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Requisitos para la obtención de títulos,
+                        distinciones honoríficas y protocolos ceremoniales de investidura.</p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 transition-colors group">
+                        <ion-icon name="download-outline"
+                            class="group-hover:-translate-y-1 transition-transform"></ion-icon> Descargar PDF
+                    </a>
+                </div>
+
             </div>
-        </div>
 
-    </div>
+            <div class="mt-16 bg-blue-50 border border-blue-100 rounded-lg p-8 text-center">
+                <ion-icon name="information-circle-outline" class="text-4xl text-blue-800 mb-4"></ion-icon>
+                <h4 class="text-lg font-bold text-navy-900 mb-2">¿No encuentra un documento?</h4>
+                <p class="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
+                    Si usted es cursante y requiere normativas o formularios específicos que no están listados aquí, por
+                    favor diríjase al Departamento de Registro o acceda al Aula Virtual con sus credenciales.
+                </p>
+                <a href="contacto.html"
+                    class="inline-block px-6 py-2 bg-blue-800 text-white font-semibold rounded hover:bg-blue-900 transition-colors text-sm">
+                    Contactar Secretaría Académica
+                </a>
+            </div>
+
+        </div>
+    </main>
 
     <footer class="bg-navy-950 text-gray-300 pt-16 pb-8 border-t-4 border-gold-600 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -418,8 +410,8 @@
                         </span>
                     </div>
                     <a href="contacto.html"
-                        class="inline-block mt-2 text-xs text-gold-500 hover:text-white font-bold uppercase">Ver
-                        en Google Maps</a>
+                        class="inline-block mt-2 text-xs text-gold-500 hover:text-white font-bold uppercase">Ver en
+                        Google Maps</a>
                 </div>
             </div>
 
@@ -439,11 +431,9 @@
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
-        if (btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     </script>
 </body>
 
